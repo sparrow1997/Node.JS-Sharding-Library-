@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MY APP</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h2> May Node and Express be with you.</h2>      
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>FName</th>
+        <th>Lname</th>
+        <th>Number</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<quotes.length; i++) { %>
+      <tr>
+        <td><%= quotes[i].fname %></td>
+        <td><%= quotes[i].lname %></td>
+        <td><%= quotes[i].number %></td>
+        <td><%= quotes[i].email %></td>
+      </tr>
+      <%}%>
+    </tbody>
+  </table>
+
+  <br>
+  <br>
+  <div>
+   
+
+
+
+
+  <form action="/quotes" method="POST">
+    <input type="text" placeholder="fname" name="fname">
+    <input type="text" placeholder="lname" name="lname">
+    <input type="text" placeholder="number" name="number">
+    <input type="email" placeholder="email" name="email">
+
+    <button type="submit">Submit</button>
+  </form>
+  </div>
+</div>
+  
+</body>
+</html>
